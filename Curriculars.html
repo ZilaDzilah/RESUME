@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>- WELCOME TO NURUL NAZILAH WEBSITE-</title>
+</head>
+<body><body background="images/bg11.jpg">
+	<audio controls autoplay>
+		<source src="sound/intro.mp3" type="audio/mpeg">
+ </audio>
+
+ <font face="forte" color="skyblue"> <h1><marquee behavior="alternate">  My Curriculars </marquee></p></h1></font>
+
+<p align="center"><font face="tahoma" size="4">
+	<a href="Homepage.html"><img src="images/home.jpg"></a> <a href="Summary.html"><img src="images/Summary.jpg"> </a> <a href="education.html"><img src="images/edu.jpg"></a>  <a href="curriculars.html"><img src="images/curs.jpg"></a>  <a href="experiences.html"><img src="images/exp.jpg"></a>  <a href="skills.html"><img src="images/skills.jpg"></a>  <a href="achievement.html"><img src="images/archi.jpg"></a>  <a href="references.html"><img src="images/refer.jpg"></a> <a href="contact.html"><img src="images/contact.jpg"></a> </p></font>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove();
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+
+
+
+
+	<head><title>Table</title></head>
+	<body>
+
+<table border="2" align="center" width="400" bgcolor="lime">
+
+ <tr>  
+<th width="20">No. </th>
+<th width="500">Achievement list</th>
+<th width="60">Year</th>
+
+</tr>
+<td width="20" bgcolor="olive"> 1.</td>
+<td width="500" bgcolor="lightgreen">Fourth place for Choral Speaking Competition (Peringkat Daerah)></td>
+<td width="60" bgcolor="khaki">2011</td>
+
+</tr>
+<td width="20" bgcolor="olive"> 2.</td>
+<td width="500" bgcolor="lightgreen">Treasurer of Persatuan Pandu Puteri></td>
+<td width="60" bgcolor="khaki">2013 & 2014.</td>
+
+</tr>
+<td width="20"bgcolor="olive">3.</td>
+<td width="500" bgcolor="lightgreen">Third place for Essay Writing Competition</td>
+<td width="60" bgcolor="khaki">2011
+
+</tr>
+<td width="20"bgcolor="olive">4.</td>
+<td width="500" bgcolor="lightgreen">Program Khidmat Masyarakat Ajuran Kelab Sivik</td>
+<td width="60" bgcolor="khaki">2014
+
+</tr>
+
+</table>
+		
+
+
+
+
+
+	</body>
+	</html>
